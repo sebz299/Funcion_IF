@@ -20,13 +20,24 @@ namespace Funcion_IF
         private void button1_Click(object sender, EventArgs e)
         {
             //Obligar al ususario a que ingrese una edad valida
-            if (int.TryParse(txtedad.Text, out int edad))
+            if (int.TryParse(textBox1.Text, out int edad))
             {
-                MessageBox.Show("Su edad es " +  textBox1.Text  +  " años");
+                if  (edad > 0)
+                {
+
+                }
+                if (edad > 17)
+                {
+                    MessageBox.Show("Eres mayor de edad");
+                }
+                else
+                {
+                    MessageBox.Show("Es menor de edad");
+                }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese una edad valida")
+                MessageBox.Show("Por favor, ingrese una edad valida");
             }
         }
     }
